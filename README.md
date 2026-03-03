@@ -28,10 +28,10 @@ pnpm dlx sv@0.12.4 create --template library --types ts --add prettier eslint sv
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
 ```sh
-npm run dev
+pnpm run dev
 
 # or start the server and open the app in a new browser tab
-npm run dev -- --open
+pnpm run dev -- --open
 ```
 
 Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
@@ -41,16 +41,16 @@ Everything inside `src/lib` is part of your library, everything inside `src/rout
 To build your library:
 
 ```sh
-npm pack
+pnpm pack
 ```
 
 To create a production version of your showcase app:
 
 ```sh
-npm run build
+pnpm run build
 ```
 
-You can preview the production build with `npm run preview`.
+You can preview the production build with `pnpm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
 
@@ -61,5 +61,5 @@ Go into the `package.json` and give your package the desired name through the `"
 To publish your library to [npm](https://www.npmjs.com):
 
 ```sh
-npm publish
+pnpm publish
 ```
