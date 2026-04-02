@@ -44,13 +44,18 @@ print(pd.concat([city_counts, city_means], axis=1))
 
 # ------------------------------------
 # Boxplot of foodpanda ratings per city + medians
-# ratings_grouped_by_city = ph_restos.groupby("City")['AverageRating'];
-# datasets = []
+ratings_grouped_by_city = ph_restos.groupby("City")['AverageRating'];
+datasets = []
 
-# for city in cities:
-#     rating_of_city = ratings_grouped_by_city.get_group(city)
-#     datasets.append(rating_of_city)
-#     print(city, rating_of_city.median())
+for city in cities:
+    rating_of_city = ratings_grouped_by_city.get_group(city)
+    plt.hist(rating_of_city)
+    plt.title("Histogram for Ratings of " + city)
+    plt.xlabel("Rating")
+    plt.ylabel("Amount of Ratings")
+    plt.show()
+    # datasets.append(rating_of_city)
+    print(city, rating_of_city.median())
 
 # plt.figure(figsize=(20, 6))
 # box_plot = plt.boxplot(datasets, tick_labels=list(cities), showmeans=True)
