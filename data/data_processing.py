@@ -1,25 +1,85 @@
+from data_preprocessing import ph_restos, ph_reviews, city_pop_densities
 import pandas as pd
-import re
+import matplotlib.pyplot as plt
+import numpy as np
 
-ph_restos = pd.read_csv("ph_restos_2025.csv")
+# ------------------------------------
+# See average rating of restaurants per city
+cities = ph_restos["City"].unique();
+city_counts = ph_restos.groupby("City")["AverageRating"].count()
+# print(type(city_counts))
+city_means = ph_restos.groupby("City")["AverageRating"].mean()
 
-# Lowercase store names & food type
-ph_restos["CompleteStoreName"] = ph_restos["CompleteStoreName"].apply(str.lower)
-ph_restos["FoodType"] = ph_restos["FoodType"].astype(str)
-ph_restos["FoodType"] = ph_restos["FoodType"].apply(str.lower)
+print(pd.concat([city_counts, city_means], axis=1))
+# print(cities)
 
-# print(ph_restos)
+# xpoints = list(city_pop_densities.values())
+# ypoints = city_means.to_numpy()
+# labels = list(city_pop_densities.keys())
 
-ph_reviews = pd.read_csv("ph_reviews_2025.csv")
+# combined = list(zip(xpoints, ypoints, labels))
+# combined.sort(key=lambda x: x[0])
+# print(combined)
 
-# Lowercase review
-ph_reviews["text"] = ph_reviews["text"].astype(str)
-ph_reviews["text"] = ph_reviews["text"].apply(str.lower)
+# x, y, _ = zip(*combined)
 
-# Remove all punctuation in reviews
-ph_reviews["text"] = ph_reviews["text"].apply(lambda s: re.sub(r'[^a-zA-Z0-9 ]', "", s))
+# plt.plot(x, y)
 
-# Drop uuid & createdAt columns
-ph_reviews = ph_reviews.drop(columns=["uuid", "createdAt", "likeCount", "isLiked"])
+# plt.xlabel("City Population Densities (2020)")
+# plt.ylabel("Average Ratings per City on Foodpanda (2025)")
 
-print(ph_reviews)
+# plt.show()
+
+# city_count_pts = city_counts.to_numpy()
+# combined_2 = list(zip(city_count_pts, ypoints))
+# combined_2.sort(key=lambda x: x[0])
+
+# x2, y2 = zip(*combined_2)
+# plt.plot(x2, y2)
+
+# plt.xlabel("Number of Foodpanda Stores/Restaurants per City")
+# plt.ylabel("Average Ratings per City on Foodpanda (2025)")
+
+# plt.show()
+
+# ------------------------------------
+# Boxplot of foodpanda ratings per city + medians
+# ratings_grouped_by_city = ph_restos.groupby("City")['AverageRating'];
+# datasets = []
+
+# for city in cities:
+#     rating_of_city = ratings_grouped_by_city.get_group(city)
+#     datasets.append(rating_of_city)
+#     print(city, rating_of_city.median())
+
+# plt.figure(figsize=(20, 6))
+# box_plot = plt.boxplot(datasets, tick_labels=list(cities), showmeans=True)
+# plt.xlabel("Cities")
+# plt.ylabel("Average Ratings from Foodpanda")
+# plt.xticks(rotation=45);
+# plt.show()
+
+# ------------------------------------
+# Get the weighted average rating of a city 
+
+# average_ratings_per_city = {};
+# reviews_grouped_by_store = ph_reviews.groupby("StoreId");
+# stores_grouped_by_city = ph_restos.groupby("City");
+
+# for city in cities:
+#     print(city)
+#     stores = stores_grouped_by_city.get_group(city);
+#     averageCityRating = 0;
+#     cityReviews = 0;
+#     for store in list(stores["StoreId"]):
+#         if store in list(ph_reviews["StoreId"]):
+#             reviews = reviews_grouped_by_store.get_group(store)["StoreId"].count()
+#             cityReviews += reviews
+#             averageCityRating += stores.loc[stores["StoreId"] == store, ["AverageRating"]].values[0] * reviews 
+#             print(store, averageCityRating)
+    
+#     print(city, "Weighted Rating:", averageCityRating/cityReviews)
+#     average_ratings_per_city[city] = (averageCityRating/cityReviews, cityReviews)
+
+# print("-------------------- \n")
+# print(average_ratings_per_city)
