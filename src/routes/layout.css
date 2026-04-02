@@ -2,12 +2,12 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --color-foodpandapink: #e21b6f;
-    --color-foodpandablack: #2e3138;
-    --color-foodpandagray: #8a8d90;
+	--color-foodpandapink: #e21b6f;
+	--color-foodpandablack: #2e3138;
+	--color-foodpandagray: #8a8d90;
 }
 
 html {
-  scroll-behavior: smooth;
-  font-family: "Open Sans", arial, sans-serif;
+	scroll-behavior: smooth;
+	font-family: 'Open Sans', arial, sans-serif;
 }
