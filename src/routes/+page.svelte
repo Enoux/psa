@@ -10,6 +10,7 @@
 	import graphRestoCountRural from '$lib/graphs/barchart_restoCount_rural.png';
 	import graphHistoUrbanized from '$lib/graphs/histogram_highly_urbanized.png';
 	import graphHistoRural from '$lib/graphs/histogram_rural.png';
+	import Results from '$lib/Results.svelte';
 
 	/** @type {Record<string, string>} */
 	const graphs = import.meta.glob('$lib/graphs/FoodType_*.png', {
@@ -62,13 +63,15 @@
 </div>
 
 <div class="p-4 text-foodpandablack">
-	<h1 class="text-center text-5xl font-bold text-foodpandapink">Food Pangdamasa</h1>
+	<h1 class="text-center text-5xl font-bold text-foodpandapink">Food Pangmasa</h1>
 
 	<br />
 
 	<h2 class="text-center text-2xl font-semibold">SDG 2: Zero Hunger</h2>
 
 	<br />
+
+	<Results></Results>
 
 	<section id="background" class="background scroll-mt-16">
 		<h2 class="text-xl font-bold">Problem & Background</h2>
