@@ -1,20 +1,24 @@
 @import 'tailwindcss';
-@import "tw-animate-css";
+@import 'tw-animate-css';
 
 @plugin '@tailwindcss/typography';
-@plugin "@iconify/tailwind4";
+@plugin '@iconify/tailwind4';
 
 @theme {
 	--color-foodpandapink: #e21b6f;
+	--color-foodpandapinklight: #ffebec;
 	--color-foodpandablack: #2e3138;
 	--color-foodpandagray: #8a8d90;
+	--color-foodpandagraylight: #f6f9f8;
 }
 
 @font-face {
-    font-family: 'Bricolage';
-    font-style: normal;
-    font-weight: 500;
-    src: url('/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+	font-family: 'Bricolage';
+	/*
+	font-style: normal;
+	font-weight: 500;
+	*/
+	src: url('/fonts/BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf') format('truetype');
 }
 
 html {

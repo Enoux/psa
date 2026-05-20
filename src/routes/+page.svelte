@@ -11,6 +11,7 @@
 	import graphHistoUrbanized from '$lib/graphs/histogram_highly_urbanized.png';
 	import graphHistoRural from '$lib/graphs/histogram_rural.png';
 	import Results from '$lib/Results.svelte';
+	import About from '$lib/About.svelte';
 
 	/** @type {Record<string, string>} */
 	const graphs = import.meta.glob('$lib/graphs/FoodType_*.png', {
@@ -49,28 +50,32 @@
 </script>
 
 <div
-	class="navbar sticky top-0 flex w-full flex-wrap items-center justify-center gap-3 bg-white shadow-md"
+	class="navbar sticky top-0 z-10 flex w-full flex-wrap items-center justify-center gap-3 bg-white shadow-lg"
 >
 	<div class="flex px-5 text-3xl font-bold text-foodpandapink">PSA</div>
 	{#each sections as section (section.name)}
 		<a
 			href={section.path}
-			class="rounded-sm p-4 text-foodpandagray transition-colors hover:bg-foodpandapink hover:text-white"
+			class="group flex flex-col items-center justify-center rounded-sm p-4 font-semibold text-foodpandagray transition-colors hover:bg-foodpandagraylight hover:text-foodpandablack"
 		>
-			{section.name}
+			<p>{section.name}</p>
+			<!-- max-w-10 group-hover:max-w-10 transition-all duration-100-->
+			<span
+				class="absolute bottom-0.5 h-1 w-0 rounded-xl bg-foodpandablack transition-all duration-75 group-hover:w-8"
+			></span>
 		</a>
 	{/each}
 </div>
 
-<div class="p-4 text-foodpandablack">
-	<h1 class="text-center text-5xl font-bold text-foodpandapink">Food Pangmasa</h1>
+<h1 class="mt-10 text-center text-5xl font-bold text-foodpandapink">Food Pangmasa</h1>
 
-	<br />
+<br />
 
-	<h2 class="text-center text-2xl font-semibold">SDG 2: Zero Hunger</h2>
+<h2 class="text-center text-2xl font-semibold text-foodpandablack">SDG 2: Zero Hunger</h2>
 
-	<br />
+<br />
 
+<div class="px-40 text-foodpandablack">
 	<Results></Results>
 
 	<section id="background" class="background scroll-mt-16">
@@ -316,11 +321,15 @@
 	<br />
 
 	<section id="about" class="scroll-mt-16">
-		<h2 class="text-xl font-bold">About Us</h2>
+		<!-- <h2 class="text-xl font-bold">About Us</h2>
 		<div class="text-l flex justify-center gap-3 px-20 py-5 text-center">
 			<div class="w-full">DOMINGO, Karlo S.</div>
 			<div class="w-full">LAZARO, Benjeouelle A.</div>
 			<div class="w-full">MORACA, Phoebe Renee P.</div>
-		</div>
+		</div> -->
 	</section>
+</div>
+
+<div class="m-4">
+	<About></About>
 </div>
