@@ -3,54 +3,60 @@
 		{ name: 'Overview', path: '#overview', icon: 'icon-[fluent--search-16-filled]' },
 		{ name: 'Results', path: '#results', icon: 'icon-[solar--graph-bold]' },
 		{ name: 'Modelling', path: '#modelling', icon: 'icon-[mdi--computer-classic]' },
+		{
+			name: 'Conclusion',
+			path: '#conclusion',
+			icon: 'icon-[fluent--lightbulb-checkmark-20-filled]'
+		},
 		{ name: 'Team', path: '#team', icon: 'icon-[fluent--people-team-16-filled]' }
 	];
 
 	import { resolve } from '$app/paths';
-	import graphRestoCountUrbanized from '$lib/graphs/barchart_restoCount_highly_urbanized.png';
-	import graphRestoCountRural from '$lib/graphs/barchart_restoCount_rural.png';
-	import graphHistoUrbanized from '$lib/graphs/histogram_highly_urbanized.png';
-	import graphHistoRural from '$lib/graphs/histogram_rural.png';
+	// import graphRestoCountUrbanized from '$lib/graphs/barchart_restoCount_highly_urbanized.png';
+	// import graphRestoCountRural from '$lib/graphs/barchart_restoCount_rural.png';
+	// import graphHistoUrbanized from '$lib/graphs/histogram_highly_urbanized.png';
+	// import graphHistoRural from '$lib/graphs/histogram_rural.png';
 	import Results from '$lib/Results.svelte';
 	import About from '$lib/About.svelte';
 	import Modelling from '$lib/Modelling.svelte';
 	import Title from '$lib/Title.svelte';
 	import Overview from '$lib/Overview.svelte';
+	import Conclusion from '$lib/Conclusion.svelte';
 
-	/** @type {Record<string, string>} */
-	const graphs = import.meta.glob('$lib/graphs/FoodType_*.png', {
-		eager: true,
-		import: 'default'
-	});
+	// /** @type {Record<string, string>} */
+	// const graphs = import.meta.glob('$lib/graphs/FoodType_*.png', {
+	// 	eager: true,
+	// 	import: 'default'
+	// });
 
-	const cities = [
-		'Cebu',
-		'Dagupan',
-		'Davao',
-		'Koronadal',
-		'Lapulapu',
-		'Makati',
-		'Malolos',
-		'Mandaluyong',
-		'Manila',
-		'Marikina',
-		'Muntinlupa',
-		'Ormoc',
-		'Pasay',
-		'Pasig',
-		'QuezonCity',
-		'SanJuan',
-		'Taguig',
-		'Valencia'
-	];
+	// const cities = [
+	// 	'Cebu',
+	// 	'Dagupan',
+	// 	'Davao',
+	// 	'Koronadal',
+	// 	'Lapulapu',
+	// 	'Makati',
+	// 	'Malolos',
+	// 	'Mandaluyong',
+	// 	'Manila',
+	// 	'Marikina',
+	// 	'Muntinlupa',
+	// 	'Ormoc',
+	// 	'Pasay',
+	// 	'Pasig',
+	// 	'QuezonCity',
+	// 	'SanJuan',
+	// 	'Taguig',
+	// 	'Valencia'
+	// ];
 
-	const cityGraphs = cities.map((city) => {
-		const path = `/src/lib/graphs/FoodType_${city}.png`;
-		return {
-			city,
-			src: graphs[path]
-		};
-	});
+	// const cityGraphs = cities.map((city) => {
+	// 	const path = `/src/lib/graphs/FoodType_${city}.png`;
+	// 	return {
+	// 		city,
+	// 		src: graphs[path]
+	// 	};
+	// });
 </script>
 
 <div
@@ -92,6 +98,10 @@
 
 <section id="modelling" class="scroll-mt-24">
 	<Modelling />
+</section>
+
+<section id="conclusion" class="scroll-mt-24">
+	<Conclusion />
 </section>
 
 <section id="team" class="scroll-mt-24">
