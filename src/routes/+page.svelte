@@ -3,7 +3,7 @@
 		{ name: 'Overview', path: '#overview', icon: 'icon-[fluent--search-16-filled]' },
 		{ name: 'Results', path: '#results', icon: 'icon-[solar--graph-bold]' },
 		{ name: 'Modelling', path: '#modelling', icon: 'icon-[mdi--computer-classic]' },
-		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' }
+		{ name: 'Team', path: '#team', icon: 'icon-[fluent--people-team-16-filled]' }
 	];
 
 	import { resolve } from '$app/paths';
@@ -281,6 +281,6 @@
 	<Modelling />
 </section>
 
-<section id="about" class="scroll-mt-24">
+<section id="team" class="scroll-mt-24">
 	<About />
 </section>
