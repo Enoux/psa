@@ -39,10 +39,13 @@
 	];
 </script>
 
-<div class="mx-24 mt-4 mb-8 flex flex-col place-content-center">
-	<h3 class="mb-8 w-full text-3xl font-bold">Machine Learning (Modelling)</h3>
+<div class="m-4 mb-8 flex flex-col place-content-center text-foodpandablack">
+	<h3 class="w-full px-30 pb-8 text-3xl font-medium">
+		<span class="icon-[mdi--computer-classic] align-text-bottom text-4xl"></span>
+		Machine Learning (Modelling)
+	</h3>
 
-	<p class="w-full px-36 text-center text-lg">
+	<p class="text-justified w-full px-40 text-lg">
 		Using the restaurant data from Foodpanda, we trained a <span class="font-bold"
 			>Decision Tree Regressor</span
 		>
@@ -50,7 +53,7 @@
 		<span class="font-bold">Random Tree Regressor</span> to predict the
 		<span class="font-bold">average rating of a restaurant</span>
 		based on its type and the urbanization (i.e. the
-		<span class="italic">population density</span>)) of its location.
+		<span class="italic">population density</span>) of its location.
 	</p>
 
 	<!-- Limitations -->

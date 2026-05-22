@@ -1,7 +1,6 @@
 <script>
 	const sections = [
-		{ name: 'Home', path: '#', icon: 'icon-[solar--home-bold]' },
-		{ name: 'Background', path: '#background', icon: 'icon-[fluent--search-16-filled]' },
+		{ name: 'Overview', path: '#overview', icon: 'icon-[fluent--search-16-filled]' },
 		{ name: 'Results', path: '#results', icon: 'icon-[solar--graph-bold]' },
 		{ name: 'Modelling', path: '#modelling', icon: 'icon-[mdi--computer-classic]' },
 		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' }
@@ -16,6 +15,7 @@
 	import About from '$lib/About.svelte';
 	import Modelling from '$lib/Modelling.svelte';
 	import Title from '$lib/Title.svelte';
+	import Overview from '$lib/Overview.svelte';
 
 	/** @type {Record<string, string>} */
 	const graphs = import.meta.glob('$lib/graphs/FoodType_*.png', {
@@ -56,7 +56,7 @@
 <div
 	class="navbar sticky top-0 z-10 flex h-[5rem] w-full items-center justify-between gap-10 bg-white px-20 shadow-lg/8"
 >
-	<a href={resolve('/')} class="text-3xl font-medium text-nowrap text-foodpandapink">
+	<a href={resolve('/')} class="text-3xl font-medium text-nowrap text-pink-500">
 		<span class="icon-[mdi--bar-chart] align-text-bottom text-4xl"></span>
 		Food Pangmasa
 	</a>
@@ -79,93 +79,45 @@
 
 <Title />
 
+<section id="overview" class="scroll-mt-24">
+	<Overview></Overview>
+</section>
+
 <div class="px-40 text-foodpandablack">
 	<Results></Results>
 
-	<section id="background" class="background scroll-mt-24">
-		<h2 class="text-xl font-bold">Problem & Background</h2>
-		<p>
-			Foodpanda is an online food delivery platform that is widely used in the Philippines,
-			especially in recent years. Many customers turn to Foodpanda to have their food delivered from
-			a range of restaurants and stores available on the platform. Because of the nature of delivery
-			services, customers are still limited to the food options available in their local area. As
-			such, users from some cities may have convenient access to a wide range of highly satisfactory
-			food while others might not be able to avail of the same variety and quality in their area.
-		</p>
+	<h2 class="text-xl font-bold">Objectives</h2>
+	<ol>
+		<li>
+			Determine if there is a correlation between the urbanization of a city/region to the quality
+			of the food they can order online.
+		</li>
+		<li>Identify the types of food that Filipinos primarily order online.</li>
+	</ol>
 
-		<br />
+	<br />
 
-		<h2 class="text-xl font-bold">Solution</h2>
-		<p>
-			To address this, a comprehensive analysis of the reviews left by Food Panda customers will be
-			done to gain a better understanding of food widely available and sought after in different
-			cities. In doing so, attention may be turned to areas that can still improve on the quality
-			and variety of available food on delivery service platforms such as Foodpanda.
-		</p>
-
-		<br />
-
-		<h2 class="text-xl font-bold">Research Questions</h2>
-		<ol>
-			<li>
-				Does the urbanization of a city have an effect on the quality of food served by
-				restaurants/shops on delivery service platforms, such as Foodpanda?
-			</li>
-			<li>
-				What are the most commonly ordered cuisine/food/drink types (e.g. Fast Food, Filipino,
-				etc.), based on the amount of reviews & reviewers, in cities of varying levels of
-				urbanization?
-			</li>
-		</ol>
-
-		<br />
-
-		<h2 class="text-xl font-bold">Research Hypotheses</h2>
-		<ol>
-			<li>
-				Highly urbanized cities/regions are likely to have higher quality restaurants and shops.
-			</li>
-			<li>
-				Users from highly urbanized cities/regions are likely to order more varied types of food,
-				while fast food may be more commonly ordered in other areas.
-			</li>
-		</ol>
-
-		<br />
-
-		<h2 class="text-xl font-bold">Objectives</h2>
-		<ol>
-			<li>
-				Determine if there is a correlation between the urbanization of a city/region to the quality
-				of the food they can order online.
-			</li>
-			<li>Identify the types of food that Filipinos primarily order online.</li>
-		</ol>
-
-		<br />
-
-		<h2 class="text-xl font-bold">Important Links</h2>
-		<ol>
-			<li>
-				<a
-					href="https://docs.google.com/spreadsheets/d/1CkC7lJ7P7uGn0Js8b4sufUD3CL3NthUVe_2WrZq40d8/edit?usp=sharing"
-					class="text-green-800 underline"
-					target="_blank"
-				>
-					Uploaded Dataset (GSheets)
-				</a>
-			</li>
-			<li>
-				<a
-					href="https://docs.google.com/document/d/1j4aIZpcoBELYkqf5x0IA8JUSZ3Fl8aTrHh3rioMdGEc/edit?tab=t.uuf2zm7zpj7i#heading=h.6fr3l6ulkshz"
-					class="text-blue-800 underline"
-					target="_blank"
-				>
-					Dataset Description (GDocs)
-				</a>
-			</li>
-		</ol>
-	</section>
+	<h2 class="text-xl font-bold">Important Links</h2>
+	<ol>
+		<li>
+			<a
+				href="https://docs.google.com/spreadsheets/d/1CkC7lJ7P7uGn0Js8b4sufUD3CL3NthUVe_2WrZq40d8/edit?usp=sharing"
+				class="text-green-800 underline"
+				target="_blank"
+			>
+				Uploaded Dataset (GSheets)
+			</a>
+		</li>
+		<li>
+			<a
+				href="https://docs.google.com/document/d/1j4aIZpcoBELYkqf5x0IA8JUSZ3Fl8aTrHh3rioMdGEc/edit?tab=t.uuf2zm7zpj7i#heading=h.6fr3l6ulkshz"
+				class="text-blue-800 underline"
+				target="_blank"
+			>
+				Dataset Description (GDocs)
+			</a>
+		</li>
+	</ol>
 
 	<br />
 
