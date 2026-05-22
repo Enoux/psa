@@ -1,7 +1,13 @@
 <div class="mx-4 py-10 text-foodpandablack">
-	<h2 class="px-30 pb-10 text-3xl font-medium">
-		<span class="icon-[fluent--lightbulb-checkmark-20-filled] align-text-bottom text-4xl"></span> Conclusion
-		& Recommendations
+	<h2 class="flex space-x-4 px-40 pb-10 text-3xl font-medium">
+		<span
+			class="icon-[fluent--lightbulb-checkmark-20-filled] align-text-bottom text-4xl text-foodpandapink"
+		></span>
+		<p
+			class="bg-linear-to-r/oklch from-pink-500 to-rose-500 bg-clip-text text-4xl font-extrabold text-transparent"
+		>
+			Conclusion & Recommendations
+		</p>
 	</h2>
 
 	<div class="flex w-full flex-col gap-5 px-40">
