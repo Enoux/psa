@@ -40,10 +40,15 @@
 </script>
 
 <div class="m-4 mb-8 flex flex-col place-content-center text-foodpandablack">
-	<h3 class="w-full px-30 pb-8 text-4xl font-medium">
-		<span class="icon-[mdi--computer-classic] align-text-bottom text-4xl"></span>
-		Machine Learning (Modelling)
-	</h3>
+
+	<div class="px-40 flex w-full flex-row items-center space-x-4 pb-4">
+		<span class="icon-[mdi--computer-classic] text-3xl text-foodpandapink"></span>
+		<p
+			class="bg-linear-to-r/oklch from-pink-500 to-rose-500 bg-clip-text text-4xl font-extrabold text-transparent"
+		>
+			Machine Learning (Modelling)
+		</p>
+	</div>
 
 	<p class="text-justified w-full px-40 text-lg">
 		Using the restaurant data from Foodpanda, we trained a <span class="font-bold"

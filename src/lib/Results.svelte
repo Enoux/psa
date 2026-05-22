@@ -4,6 +4,7 @@
 	import graphRestoCountRural from '$lib/graphs/barchart_restoCount_rural.png';
 	import graphHistoUrbanized from '$lib/graphs/histogram_highly_urbanized.png';
 	import graphHistoRural from '$lib/graphs/histogram_rural.png';
+	import restoTypes from '$lib/graphs/RestoTypes.png';
 </script>
 
 <div class="m-4 mb-8 flex flex-col place-content-center text-foodpandablack">
@@ -145,6 +146,23 @@
 		</div>
 	</div>
 
+	<div class="flex content-center justify-center p-4">
+		<div class="flex w-4xl place-content-center">
+			<div class="flex w-4/5 flex-wrap rounded-2xl bg-foodpandapink text-white p-4 text-center">
+				<div class="flex w-1/3 flex-wrap place-content-center px-8">
+					<p class="w-full text-2xl font-bold">RQ1</p>
+				</div>
+				<div class="flex w-2/3 flex-wrap px-8">
+					<p class="w-full text-2xl font-bold">Null Hypothesis</p>
+					<p class="w-full text-justify">
+						There is no significant difference between the food quality of restaurants available on
+						Foodpanda in urban and rural cities.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<p class="w-full pt-10 pb-2 text-2xl">Urbanization and Food Variety</p>
 
 	<p class="w-full text-justify text-lg">
@@ -152,4 +170,60 @@
 		cities are grouped based on whether or not they are a highly urbanized city (HUC) as classified
 		by Phil Atlas:
 	</p>
+
+	<div class="flex w-full place-content-center">
+		<img
+			src={restoTypes}
+			alt="Distribution of Restaurants Per City Type"
+			class="h-auto w-4xl pt-2 pb-2"
+		/>
+	</div>
+	<p class="w-full text-justify text-lg mb-4">
+		Upon initial inspection, it can be observed that the HUC with the lowest amount of food types
+		(i.e. San Juan) is almost on par to the non-HUC with the highest amount of food types (i.e.
+		Malolos, Bulacan). Specifically, <span class="font-bold"
+			>Malolos has 48 restaurant types while San Juan has 47</span
+		>.
+	</p>
+	<p class="w-full text-justify text-lg mb-4">
+		By applying the <span class="font-bold">Shapiro-Wilk</span> test to the restaurant food types, a
+		<span class="font-bold">p-value of 0.003</span>
+		is obtained, indicating that the data is
+		<span class="font-bold">not normally distributed</span>. Thus, the
+		<span class="font-bold">Mann-Whitney U</span>
+		(non-parametric test to compare independently-obtained samples between groups) test was utilized to
+		determine if there was a significant difference between the means of the amount of restaurant types
+		of HUCs and non-HUCs. Performing the test produced a
+		<span class="font-bold">p-value of 0.0009</span>
+		which shows that
+		<span class="font-bold"
+			>there is indeed a significant difference between the amount of Foodpanda restaurant types
+			between HUCs and non-HUCs</span
+		>.
+	</p>
+	<p class="w-full text-justify text-lg mb-4">
+		To further analyze the trends in the data, <span class="font-bold">Kendall’s Tau</span>
+		(non-parametric measure of relationships between ordinal data) was tested for between the respective
+		amount of restaurant food types and population densities of each city. This produced a
+		<span class="font-bold">p-value of 0.005</span>
+		signifying that there is actually a
+		<span class="font-bold">correlation between the two aforementioned variables</span>.
+	</p>
+
+	<div class="flex content-center justify-center p-4">
+		<div class="flex w-4xl place-content-center">
+			<div class="flex w-4/5 flex-wrap rounded-2xl bg-foodpandapink text-white p-4 text-center">
+				<div class="flex w-1/3 flex-wrap place-content-center px-8">
+					<p class="w-full text-2xl font-bold">RQ2</p>
+				</div>
+				<div class="flex w-2/3 flex-wrap px-8">
+					<p class="w-full text-2xl font-bold">Alternative Hypothesis</p>
+					<p class="w-full text-justify">
+						There is a significant difference between the amount of restaurant types available on
+						Foodpanda in urban and rural cities.
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
