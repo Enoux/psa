@@ -22,6 +22,7 @@
 	import Title from '$lib/Title.svelte';
 	import Overview from '$lib/Overview.svelte';
 	import Conclusion from '$lib/Conclusion.svelte';
+	import logo from '$lib/assets/logo.png';
 
 	// /** @type {Record<string, string>} */
 	// const graphs = import.meta.glob('$lib/graphs/FoodType_*.png', {
@@ -62,8 +63,9 @@
 <div
 	class="navbar sticky top-0 z-10 flex h-[5rem] w-full items-center justify-between gap-10 bg-white px-20 shadow-lg/8"
 >
-	<a href={resolve('/')} class="text-3xl font-medium text-nowrap text-pink-500">
-		<span class="icon-[mdi--bar-chart] align-text-bottom text-4xl"></span>
+	<a href={resolve('/')} class="flex gap-2 text-3xl font-medium text-nowrap text-pink-500">
+		<!-- <span class="icon-[mdi--bar-chart] align-text-bottom text-4xl"></span> -->
+		<img src={logo} alt="Food Pangmasa Logo" class="h-[1em] w-auto" />
 		Food Pangmasa
 	</a>
 
@@ -93,7 +95,6 @@
 	<section id="results" class="scroll-mt-24">
 		<Results />
 	</section>
-
 </div>
 
 <section id="modelling" class="scroll-mt-24">

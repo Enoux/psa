@@ -40,8 +40,7 @@
 </script>
 
 <div class="m-4 mb-8 flex flex-col place-content-center text-foodpandablack">
-
-	<div class="px-40 flex w-full flex-row items-center space-x-4 pb-4">
+	<div class="flex w-full flex-row items-center space-x-4 px-40 pb-4">
 		<span class="icon-[mdi--computer-classic] text-3xl text-foodpandapink"></span>
 		<p
 			class="bg-linear-to-r/oklch from-pink-500 to-rose-500 bg-clip-text text-4xl font-extrabold text-transparent"

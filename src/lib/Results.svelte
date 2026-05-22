@@ -148,7 +148,7 @@
 
 	<div class="flex content-center justify-center p-4">
 		<div class="flex w-4xl place-content-center">
-			<div class="flex w-4/5 flex-wrap rounded-2xl bg-foodpandapink text-white p-4 text-center">
+			<div class="flex w-4/5 flex-wrap rounded-2xl bg-foodpandapink p-4 text-center text-white">
 				<div class="flex w-1/3 flex-wrap place-content-center px-8">
 					<p class="w-full text-2xl font-bold">RQ1</p>
 				</div>
@@ -178,14 +178,14 @@
 			class="h-auto w-4xl pt-2 pb-2"
 		/>
 	</div>
-	<p class="w-full text-justify text-lg mb-4">
+	<p class="mb-4 w-full text-justify text-lg">
 		Upon initial inspection, it can be observed that the HUC with the lowest amount of food types
 		(i.e. San Juan) is almost on par to the non-HUC with the highest amount of food types (i.e.
 		Malolos, Bulacan). Specifically, <span class="font-bold"
 			>Malolos has 48 restaurant types while San Juan has 47</span
 		>.
 	</p>
-	<p class="w-full text-justify text-lg mb-4">
+	<p class="mb-4 w-full text-justify text-lg">
 		By applying the <span class="font-bold">Shapiro-Wilk</span> test to the restaurant food types, a
 		<span class="font-bold">p-value of 0.003</span>
 		is obtained, indicating that the data is
@@ -201,7 +201,7 @@
 			between HUCs and non-HUCs</span
 		>.
 	</p>
-	<p class="w-full text-justify text-lg mb-4">
+	<p class="mb-4 w-full text-justify text-lg">
 		To further analyze the trends in the data, <span class="font-bold">Kendall’s Tau</span>
 		(non-parametric measure of relationships between ordinal data) was tested for between the respective
 		amount of restaurant food types and population densities of each city. This produced a
@@ -212,7 +212,7 @@
 
 	<div class="flex content-center justify-center p-4">
 		<div class="flex w-4xl place-content-center">
-			<div class="flex w-4/5 flex-wrap rounded-2xl bg-foodpandapink text-white p-4 text-center">
+			<div class="flex w-4/5 flex-wrap rounded-2xl bg-foodpandapink p-4 text-center text-white">
 				<div class="flex w-1/3 flex-wrap place-content-center px-8">
 					<p class="w-full text-2xl font-bold">RQ2</p>
 				</div>

@@ -1,6 +1,6 @@
 <div class="mx-4 py-10 text-foodpandablack">
-	<div class="px-40 flex w-full flex-row items-center space-x-4 pb-4">
-		<span class="icon-[fluent--search-16-filled]  text-3xl text-foodpandapink"></span>
+	<div class="flex w-full flex-row items-center space-x-4 px-40 pb-4">
+		<span class="icon-[fluent--search-16-filled] text-3xl text-foodpandapink"></span>
 		<p
 			class="bg-linear-to-r/oklch from-pink-500 to-rose-500 bg-clip-text text-4xl font-extrabold text-transparent"
 		>
