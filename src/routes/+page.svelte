@@ -3,7 +3,8 @@
 		{ name: 'Home', path: '#', icon: 'icon-[solar--home-bold]' },
 		{ name: 'Background', path: '#background', icon: 'icon-[fluent--search-16-filled]' },
 		{ name: 'Results', path: '#results', icon: 'icon-[solar--graph-bold]' },
-		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' }
+		{ name: 'Modelling', path: '#modelling', icon: 'icon-[mdi--computer-classic]'},
+		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' },
 	];
 
 	import { resolve } from '$app/paths';
@@ -13,6 +14,7 @@
 	import graphHistoRural from '$lib/graphs/histogram_rural.png';
 	import Results from '$lib/Results.svelte';
 	import About from '$lib/About.svelte';
+	import Modelling from '$lib/Modelling.svelte';
 	import Title from '$lib/Title.svelte';
 
 	/** @type {Record<string, string>} */
@@ -322,6 +324,10 @@
 
 	<br />
 </div>
+
+<section id="modelling" class="scroll-mt-24">
+	<Modelling />
+</section>
 
 <section id="about" class="scroll-mt-24">
 	<About />
