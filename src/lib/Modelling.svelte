@@ -40,7 +40,7 @@
 </script>
 
 <div class="m-4 mb-8 flex flex-col place-content-center text-foodpandablack">
-	<h3 class="w-full px-30 pb-8 text-3xl font-medium">
+	<h3 class="w-full px-30 pb-8 text-4xl font-medium">
 		<span class="icon-[mdi--computer-classic] align-text-bottom text-4xl"></span>
 		Machine Learning (Modelling)
 	</h3>

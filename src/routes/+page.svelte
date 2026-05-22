@@ -84,45 +84,12 @@
 </section>
 
 <div class="px-40 text-foodpandablack">
-	<Results></Results>
-
-	<h2 class="text-xl font-bold">Objectives</h2>
-	<ol>
-		<li>
-			Determine if there is a correlation between the urbanization of a city/region to the quality
-			of the food they can order online.
-		</li>
-		<li>Identify the types of food that Filipinos primarily order online.</li>
-	</ol>
-
-	<br />
-
-	<h2 class="text-xl font-bold">Important Links</h2>
-	<ol>
-		<li>
-			<a
-				href="https://docs.google.com/spreadsheets/d/1CkC7lJ7P7uGn0Js8b4sufUD3CL3NthUVe_2WrZq40d8/edit?usp=sharing"
-				class="text-green-800 underline"
-				target="_blank"
-			>
-				Uploaded Dataset (GSheets)
-			</a>
-		</li>
-		<li>
-			<a
-				href="https://docs.google.com/document/d/1j4aIZpcoBELYkqf5x0IA8JUSZ3Fl8aTrHh3rioMdGEc/edit?tab=t.uuf2zm7zpj7i#heading=h.6fr3l6ulkshz"
-				class="text-blue-800 underline"
-				target="_blank"
-			>
-				Dataset Description (GDocs)
-			</a>
-		</li>
-	</ol>
-
-	<br />
+	<section id="results" class="scroll-mt-24">
+		<Results />
+	</section>
 
 	<section id="results" class="scroll-mt-24">
-		<h2 class="text-xl font-bold">Exploratory Data Analysis</h2>
+		<!-- <h2 class="text-xl font-bold">Exploratory Data Analysis</h2>
 
 		<p class="font-bold">
 			1. Does the urbanization of a city have an effect on the quality of food served by
@@ -271,7 +238,7 @@
 					<img {src} alt={`graph ${city}`} class="h-auto w-full" />
 				</div>
 			{/each}
-		</div>
+		</div> -->
 	</section>
 
 	<br />
