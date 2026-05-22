@@ -3,8 +3,8 @@
 		{ name: 'Home', path: '#', icon: 'icon-[solar--home-bold]' },
 		{ name: 'Background', path: '#background', icon: 'icon-[fluent--search-16-filled]' },
 		{ name: 'Results', path: '#results', icon: 'icon-[solar--graph-bold]' },
-		{ name: 'Modelling', path: '#modelling', icon: 'icon-[mdi--computer-classic]'},
-		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' },
+		{ name: 'Modelling', path: '#modelling', icon: 'icon-[mdi--computer-classic]' },
+		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' }
 	];
 
 	import { resolve } from '$app/paths';
@@ -58,7 +58,7 @@
 >
 	<a href={resolve('/')} class="text-3xl font-medium text-nowrap text-foodpandapink">
 		<span class="icon-[mdi--bar-chart] align-text-bottom text-4xl"></span>
-		PSA
+		Food Pangmasa
 	</a>
 
 	<div class="flex h-full gap-3">
