@@ -1,4 +1,4 @@
-<div class="rounded-3xl bg-foodpandapinklight p-10 text-foodpandablack">
+<div class="m-4 rounded-3xl bg-foodpandapinklight py-10 text-foodpandablack">
 	<h2 class="px-30 pb-10 text-3xl font-medium">
 		<span class="icon-[fluent--people-team-16-filled] align-text-bottom text-4xl"></span> About Us
 	</h2>
@@ -9,13 +9,15 @@
 			<!-- placeholder for img -->
 			<p class="text-xl font-bold">Karlo Domingo</p>
 
-			<p>
-				<span class="icon-[solar--letter-bold] align-text-bottom text-xl"></span> ksdomingo4@up.edu.ph
-			</p>
-
+			<a href="mailto:ksdomingo4@up.edu.ph">
+				<span class="icon-[solar--letter-bold] align-text-bottom text-xl"></span>
+				ksdomingo4@up.edu.ph
+			</a>
+			<br />
 			<a href="https://github.com/krldomingo" target="_blank">
-				<span class="icon-[mdi--github] align-text-bottom text-xl"></span> @krldomingo</a
-			>
+				<span class="icon-[mdi--github] align-text-bottom text-xl"></span>
+				@krldomingo
+			</a>
 
 			<p class="pt-2">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -30,13 +32,15 @@
 			<!-- placeholder for img -->
 			<p class="text-xl font-bold">Benj Lazaro</p>
 
-			<p class="">
-				<span class="icon-[solar--letter-bold] align-text-bottom text-xl"></span> balazaro1@up.edu.ph
-			</p>
-
+			<a href="mailto:balazaro1@up.edu.ph">
+				<span class="icon-[solar--letter-bold] align-text-bottom text-xl"></span>
+				balazaro1@up.edu.ph
+			</a>
+			<br />
 			<a href="https://github.com/Enoux" target="_blank">
-				<span class="icon-[mdi--github] align-text-bottom text-xl"></span> @Enoux</a
-			>
+				<span class="icon-[mdi--github] align-text-bottom text-xl"></span>
+				@Enoux
+			</a>
 
 			<p class="pt-2">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -51,13 +55,15 @@
 			<!-- placeholder for img -->
 			<p class="text-xl font-bold">Fibi Moraca</p>
 
-			<p class="">
-				<span class="icon-[solar--letter-bold] align-text-bottom text-xl"></span> ppmoraca@up.edu.ph
-			</p>
-
+			<a href="mailto:ppmoraca@up.edu.ph">
+				<span class="icon-[solar--letter-bold] align-text-bottom text-xl"></span>
+				ppmoraca@up.edu.ph
+			</a>
+			<br />
 			<a href="https://github.com/dinemunyu" target="_blank">
-				<span class="icon-[mdi--github] align-text-bottom text-xl"></span> @dinemunyu</a
-			>
+				<span class="icon-[mdi--github] align-text-bottom text-xl"></span>
+				@dinemunyu
+			</a>
 
 			<p class="pt-2">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
@@ -66,9 +72,5 @@
 				voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 			</p>
 		</div>
-
-		<!-- <div class="w-full bg-foodpandapink">Benj Lazaro balazaro1@up.edu.ph</div>
-
-            <div class="w-full bg-foodpandapink">Fibi Moraca ppmoraca@up.edu.ph</div> -->
 	</div>
 </div>
