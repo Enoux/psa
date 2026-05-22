@@ -1,11 +1,12 @@
 <script>
 	const sections = [
-		{ name: 'Home', path: '/', icon: 'icon-[solar--home-bold]' },
+		{ name: 'Home', path: '#', icon: 'icon-[solar--home-bold]' },
 		{ name: 'Background', path: '#background', icon: 'icon-[fluent--search-16-filled]' },
 		{ name: 'Results', path: '#results', icon: 'icon-[solar--graph-bold]' },
 		{ name: 'About', path: '#about', icon: 'icon-[fluent--people-team-16-filled]' }
 	];
 
+	import { resolve } from '$app/paths';
 	import graphRestoCountUrbanized from '$lib/graphs/barchart_restoCount_highly_urbanized.png';
 	import graphRestoCountRural from '$lib/graphs/barchart_restoCount_rural.png';
 	import graphHistoUrbanized from '$lib/graphs/histogram_highly_urbanized.png';
@@ -53,7 +54,7 @@
 <div
 	class="navbar sticky top-0 z-10 flex h-[5rem] w-full items-center justify-between gap-10 bg-white px-20 shadow-lg/8"
 >
-	<a href="/" class="text-3xl font-medium text-nowrap text-foodpandapink">
+	<a href={resolve('/')} class="text-3xl font-medium text-nowrap text-foodpandapink">
 		<span class="icon-[mdi--bar-chart] align-text-bottom text-4xl"></span>
 		PSA
 	</a>
